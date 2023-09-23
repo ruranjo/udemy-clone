@@ -2,9 +2,9 @@ import { ADD_TO_CART,CLEAR_CART,REMOVE_CART_ITEM,GET_CART_TOTAL } from "../actio
 import { createContext, useContext, useEffect, useReducer } from "react"
 import reducer from '../reducers/cart_reducer'
 const loadCartFromStorage = () => {
-    let cart = localStorage.getItem('cart');
+    let cart = localStorage.getItem('cart-udemy');
     if(cart){
-        return JSON.parse(localStorage.getItem('cart'));
+        return JSON.parse(localStorage.getItem('cart-udemy'));
     } else {
         return [];
     }
@@ -37,7 +37,7 @@ export const CartProvider = ({children}) => {
 
     useEffect(() => {
         dispatch({type: GET_CART_TOTAL});
-        localStorage.setItem('cart', JSON.stringify(state.cart))
+        localStorage.setItem('cart-udemy', JSON.stringify(state.cart))
     }, [state.cart]);
 
     return (
