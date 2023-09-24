@@ -36,7 +36,7 @@ const HeroWrapper = styled.div`
     }
 
     h1{
-      font-size: 50px;
+      font-size: 40px;
       margin-bottom: 5px;
     }
 
