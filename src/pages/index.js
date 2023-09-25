@@ -1,10 +1,10 @@
 import Home from "./HomePage";
-
+import Cart from "./CartPage";
 /*
     import Courses from "./CoursesPage";
     import SingleCourse from "./SingleCoursePage";
-    import Cart from "./CartPage";
+    
 */
 
 
-export {Home};
+export {Home, Cart};

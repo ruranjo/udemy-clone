@@ -8,19 +8,24 @@ import {TbWorld} from "react-icons/tb";
 import {FaShoppingCart} from "react-icons/fa";
 import {RiClosedCaptioningFill} from "react-icons/ri";
 import {BiCheck} from "react-icons/bi";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import { useCartContext } from '../context/cart_context';
 
 const SingleCoursePage = () => {
     const {id} = useParams();
     const {single_course, fetchSingleCourse } = useCoursesContext();
-    const {AddToCart} = useCartContext();
-
+    const {addToCart} = useCartContext();
+    const navigate = useNavigate();
     const {id: courseID, category, image, course_name, description, rating_count, rating_star, students, creator, updated_date, lang, actual_price, discounted_price, what_you_will_learn: learnItems, content} = single_course;
 
     useEffect(() => {
         fetchSingleCourse(id);
     }, [])
+
+    const handleClickAddToCart = () => {
+        addToCart(courseID, image, course_name, creator, discounted_price, category);
+        navigate("/cart");
+    }
 
     return (
         <SingleCourseWrapper>
@@ -77,9 +82,9 @@ const SingleCoursePage = () => {
                     </div>
 
                     <div className='course-btn'>
-                        <Link to = "/cart" className='add-to-cart-btn d-inline-block fw-7 bg-purple' onClick={() => addToCart(courseID, image, course_name, creator, discounted_price, category)}>
+                        <button   onClick={handleClickAddToCart} className='add-to-cart-btn d-inline-block fw-7 bg-purple' >
                         <FaShoppingCart /> Add to cart
-                        </Link>
+                        </button>
                     </div>
 
                 </div>
