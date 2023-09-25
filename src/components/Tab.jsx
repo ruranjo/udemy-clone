@@ -59,7 +59,7 @@ const Tab = ({courses}) => {
 export default Tab
 
 const TabsWrapper = styled.div`
-  border: 1px solid red;
+  
   padding:20px;
   margin-top: 16px;
   .tabs{

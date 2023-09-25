@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Test from './components/Test';
 import Test2 from './components/Test2';
 import {Home} from './pages';
+import SingleCoursePage from './pages/SingleCoursePage';
 
 
 
@@ -17,7 +18,7 @@ function App() {
         
         <Routes>
           <Route path = "/" element = {<Home/>} />
-          <Route path = "/test" element = {<Test />} />
+          <Route path = "/courses/:id" element = {<SingleCoursePage />} />
           <Route path = "/testdos" element = {<Test2 />} />
         </Routes>
       </BrowserRouter>
