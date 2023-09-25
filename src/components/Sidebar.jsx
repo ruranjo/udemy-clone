@@ -2,7 +2,6 @@
 import React from 'react';
 import styled from "styled-components";
 import {MdClose} from "react-icons/md";
-import {Link} from "react-router-dom";
 import { useSidebarContext } from '../context/sidebar_context';
 import { useCoursesContext } from '../context/courses_context';
 
@@ -22,7 +21,7 @@ const Sidebar = () => {
             categories.map((category, idx) => {
               return (
                 <li className='sidebar-link-item fw-5' key = {idx}>
-                  <Link to = {`category/${category}`}>{category.toUpperCase()}</Link>
+                  {category.toUpperCase()}
                 </li>
               )
             })

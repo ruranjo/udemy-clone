@@ -8,7 +8,7 @@ import {TbWorld} from "react-icons/tb";
 import {FaShoppingCart} from "react-icons/fa";
 import {RiClosedCaptioningFill} from "react-icons/ri";
 import {BiCheck} from "react-icons/bi";
-import {Link, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import { useCartContext } from '../context/cart_context';
 
 const SingleCoursePage = () => {
@@ -24,7 +24,7 @@ const SingleCoursePage = () => {
 
     const handleClickAddToCart = () => {
         addToCart(courseID, image, course_name, creator, discounted_price, category);
-        navigate("/cart");
+        navigate("/udemy-clone/cart");
     }
 
     return (

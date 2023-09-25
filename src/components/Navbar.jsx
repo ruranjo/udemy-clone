@@ -13,12 +13,12 @@ const Navbar = () => {
     <NavbarWrapper className='bg-white flex'>
         <div className='container w-100'>
             <div className='brand-and-toggler flex flex-between w-100'>
-                <Link to="/" className='navbar-brand text-uppercase ls-1 fw-8'>
+                <Link to="/udemy-clone/" className='navbar-brand text-uppercase ls-1 fw-8'>
                     <span>C</span>ourse - <span>R</span>ubens
                 </Link>
 
                 <div className='navbar-btns flex'>
-                    <Link to = "/cart" className='cart-btn'>
+                    <Link to = "/udemy-clone/cart" className='cart-btn'>
                         <MdShoppingCart />
                         <span className='item-count-badge'>{total_items}</span>
                     </Link>

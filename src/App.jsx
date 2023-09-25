@@ -18,8 +18,8 @@ function App() {
         <Sidebar />
         <Routes>
           <Route path = "/udemy-clone/" element = {<Home/>} />
-          <Route path = "/courses/:id" element = {<SingleCoursePage />} />
-          <Route path = "/cart" element = {<Cart />} />
+          <Route path = "/udemy-clone/courses/:id" element = {<SingleCoursePage />} />
+          <Route path = "/udemy-clone/cart" element = {<Cart />} />
         </Routes>
       </BrowserRouter>
     </>
