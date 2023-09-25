@@ -17,7 +17,7 @@ function App() {
         <Navbar/>
         <Sidebar />
         <Routes>
-          <Route path = "/" element = {<Home/>} />
+          <Route path = "/udemy-clone/" element = {<Home/>} />
           <Route path = "/courses/:id" element = {<SingleCoursePage />} />
           <Route path = "/cart" element = {<Cart />} />
         </Routes>
